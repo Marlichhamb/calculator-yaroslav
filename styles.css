@@ -1,0 +1,44 @@
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  /* -webkit-appearance: none; */
+  appearance: none;
+}
+
+input {
+    width: 199px;
+    height: 50px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+}
+.container {
+    height: 206px;
+    width: 206px;
+
+}
+.num {
+    display: flex;
+    flex-direction: column;
+}
+.flex-num {
+    display: flex;
+}
+.flex-num-2 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
