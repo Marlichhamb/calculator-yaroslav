@@ -9,31 +9,31 @@
 </head>
 <body>
         <div class="container">
-            <input class="screen" type="number">
+            <input id="screen" type="text">
             <div class="num">
                 <div class="flex-num">
-                    <div class="number" id="num-1"> 1 </div>
-                    <div class="number" id="num-2"> 2 </div>
-                    <div class="number" id="num-3"> 3 </div>
-                    <div class="number" id="num-plus"> + </div>
+                    <div class="number" id="num-1" onclick="clickedButton('btn1')"> 1 </div>
+                    <div class="number" id="num-2" onclick="clickedButton(2)"> 2 </div>
+                    <div class="number" id="num-3" onclick="clickedButton(3)"> 3 </div>
+                    <div class="number" id="num-plus" onclick="clickedButton('+')"> + </div>
                 </div>
                 <div class="flex-num">
-                    <div class="number" id="num-4"> 4 </div>
-                    <div class="number" id="num-5"> 5 </div>
-                    <div class="number" id="num-6"> 6 </div>
-                    <div class="number" id="num-minus"> - </div>
+                    <div class="number" id="num-4" onclick="clickedButton(4)"> 4 </div>
+                    <div class="number" id="num-5" onclick="clickedButton(5)"> 5 </div>
+                    <div class="number" id="num-6" onclick="clickedButton(6)"> 6 </div>
+                    <div class="number" id="num-minus" onclick="clickedButton('-')"> - </div>
                 </div>
                 <div class="flex-num">
-                    <div class="number" id="num-7"> 7 </div>
-                    <div class="number" id="num-8"> 8 </div>
-                    <div class="number" id="num-9"> 9 </div>
-                    <div class="number" id="num-divide"> / </div>
+                    <div class="number" id="num-7" onclick="clickedButton(7)"> 7 </div>
+                    <div class="number" id="num-8" onclick="clickedButton(8)"> 8 </div>
+                    <div class="number" id="num-9" onclick="clickedButton(9)"> 9 </div>
+                    <div class="number" id="num-divide" onclick="clickedButton('/')"> / </div>
                 </div>
                 <div class="flex-num">
-                    <div class="number" id="num-0"> 0 </div>
+                    <div class="number" id="num-0" onclick="clickedButton(0)"> 0 </div>
                     <div class="number" id="num-erase"> C </div>
-                    <div class="number" id="num-point"> . </div>
-                    <div class="number" id="num-multiply"> * </div>
+                    <div class="number" id="num-point" onclick="clickedButton('.')"> . </div>
+                    <div class="number" id="num-multiply" onclick="clickedButton('*')"> * </div>
                 </div>
                 <div class="flex-num-2">
                     <div class="equals" id="num-equals"> = </div>
