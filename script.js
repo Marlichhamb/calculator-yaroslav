@@ -1,4 +1,4 @@
-// const screen = document.getElementById('screen')
+const outPut = document.getElementById('out-put')
 // const numberOne = document.getElementById('num-1')
 // const numberTwo = document.getElementById('num-2')
 // const numberThree = document.getElementById('num-3')
@@ -66,8 +66,37 @@
 // }
 
 function clickedButton (btn) {
-    console.log(btn);
+    outPut.innerHTML = btn;
 }
+
+let op; 
+  function func() {
+    let result;
+    let num1 = Number(document.getElementsByClassName('number').value);
+    let num2 = Number(document.getElementsByClassName('number').value);
+    switch (op) {
+      case '+':
+        result = num1 + num2;
+        break;
+      case '-':
+        result = num1 - num2;
+        break;
+      case '*':
+        result = num1 * num2;
+        break;
+      case '/':
+        if (num2) {
+          result = num1 / num2;
+        } else {
+          result = 'бесконечность';
+        }
+        break;
+
+    }
+
+    document.getElementById("out-put").innerHTML = result;
+  }
+
 
 // numberOne.addEventListener('click', handleClick)
 // numberTwo.addEventListener('click', handleClick)

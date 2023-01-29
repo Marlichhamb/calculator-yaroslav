@@ -6,9 +6,10 @@ input[type="number"]::-webkit-inner-spin-button {
   appearance: none;
 }
 
-input {
-    width: 199px;
+.out-put {
+    width: 204,5px;
     height: 50px;
+    border: 1px solid black;
 }
 
 .container {
