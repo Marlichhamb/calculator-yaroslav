@@ -19,82 +19,101 @@ const outPut = document.getElementById('out-put')
 
 
 // function handleClick (e) {
-//     let clickedButton 
+//     let clickButton 
 //     switch (e.target.id) {
 //         case 'num-1': 
-//             clickedButton = 1
+//             clickButton = 1
 //             break
 //         case 'num-2':
-//             clickedButton = 2 
+//             clickButton = 2 
 //             break
 //         case 'num-3':
-//             clickedButton = 3
+//             clickButton = 3
 //             break
 //         case 'num-4':
-//             clickedButton = 4
+//             clickButton = 4
 //             break
 //         case 'num-5':
-//             clickedButton = 5
+//             clickButton = 5
 //             break
 //         case 'num-6':
-//             clickedButton = 6 
+//             clickButton = 6 
 //             break
 //         case 'num-7':
-//             clickedButton = 7
+//             clickButton = 7
 //             break
 //         case 'num-8':
-//             clickedButton = 8
+//             clickButton = 8
 //             break
 //         case 'num-9':
-//             clickedButton = 9 
+//             clickButton = 9 
 //             break
 //         case 'num-0':
-//             clickedButton = 0 
+//             clickButton = 0 
 //             break
 //         case 'num-0':
-//             clickedButton = 0 
+//             clickButton = 0 
 //             break
 //         case 'num-0':
-//             clickedButton = 0 
+//             clickButton = 0 
 //             break
                         
 //         default:
-//             clickedButton = undefined
+//             clickButton = undefined
 //             break;
 //     }
-//     console.log(clickedButton);
+//     console.log(clickButton);
 // }
 
-function clickedButton (btn) {
-    outPut.innerHTML = btn;
+let operand1 = '';
+let operand2 = '';
+let operator = '';
+
+
+function clickButton (btn) {
+  if (operator) {
+    operand1 += btn;
+    outPut.innerHTML = operand1;
+  } else {
+    operand2 += btn;
+    outPut.innerHTML = operand2;
+  }
+
+
 }
 
-let op; 
-  function func() {
-    let result;
-    let num1 = Number(document.getElementsByClassName('number').value);
-    let num2 = Number(document.getElementsByClassName('number').value);
-    switch (op) {
-      case '+':
-        result = num1 + num2;
+function clickOperationButton (btn) {
+ operator =  btn;
+}
+
+  function calculate() {
+    let result = 0;
+
+    switch (operator) {
+      case 'plus':
+        result = Number(operand2) + Number(operand1);
         break;
-      case '-':
-        result = num1 - num2;
+      case 'minus':
+        result = operand1 - operand2;
         break;
-      case '*':
-        result = num1 * num2;
+      case 'multi':
+        result = operand2 * operand1;
         break;
       case '/':
-        if (num2) {
-          result = num1 / num2;
+        if ('div') {
+          result = operand1 / operand2;
         } else {
           result = 'бесконечность';
         }
         break;
+      default:
+        result = 0;
 
     }
+    operand2 = ''
+    operand1 = ''
 
-    document.getElementById("out-put").innerHTML = result;
+    outPut.innerHTML = result;
   }
 
 
