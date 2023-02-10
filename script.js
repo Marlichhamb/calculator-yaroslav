@@ -4,21 +4,20 @@ let operand1 = '';
 let operand2 = '';
 let operator = '';
 
-console.log('operator', !!operator)
-
-
 function clickButton (btn) {
   if (operator) {
-    operand1 += btn;
-    outPut.innerHTML = operand1;
-  } else {
     operand2 += btn;
     outPut.innerHTML = operand2;
+    
+  } else {
+    operand1 += btn;
+    outPut.innerHTML = operand1;
   }
 }
 
 function clickOperationButton (btn) {
  operator =  btn;
+ outPut.innerHTML = operator
 }
 
 function reset() {
@@ -32,17 +31,17 @@ function reset() {
     let result = 0;
 
     switch (operator) {
-      case 'plus':
+      case '+':
         result = Number(operand2) + Number(operand1);
         break;
-      case 'minus':
-        result = operand1 - operand2;
+      case '-':
+        result = Number(operand1) - Number(operand2);
         break;
-      case 'multi':
-        result = operand2 * operand1;
+      case '*':
+        result = Number(operand1) * Number(operand2);
         break;
-      case 'div':
-          result = operand1 / operand2;
+      case '/':
+        result = Number(operand1) / Number(operand2);
         break;
       default:
         result = 0;
