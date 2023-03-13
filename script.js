@@ -1,10 +1,16 @@
 const outPut = document.getElementById('out-put')
+const exp = document.getElementById('experiment')
 
 let operand1 = '';
 let operand2 = '';
 let operator = '';
+let expString = '';
 
 function clickButton (btn) {
+
+  expString += btn;
+  exp.innerHTML = expString;
+
   if (operator) {
     operand2 += btn;
     outPut.innerHTML = operand2;
@@ -12,19 +18,23 @@ function clickButton (btn) {
   } else {
     operand1 += btn;
     outPut.innerHTML = operand1;
-  }
+}
 }
 
 function clickOperationButton (btn) {
- operator =  btn;
- outPut.innerHTML = operator
+  expString += btn;
+  operator =  btn;
+  outPut.innerHTML = operator;
+  exp.innerHTML = expString;
 }
 
 function reset() {
   operand1 = '';
   operand2 = '';
   operator = '';
+  expString = '';
   outPut.innerHTML = '0';
+  exp.innerHTML = '';  
 }
 
   function calculate() {
